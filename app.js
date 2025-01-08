@@ -32,6 +32,9 @@ If you have suggestions for improvements, tips, or just want to exchange ideas, 
 Enjoy!
 */
 
+/* Testando commits e alterações
+*/
+
 let listaDeNumerosSorteados = [];
 let numeroLimite = 100;
 let numeroSecreto = gerarNumeroAleatorio();
