@@ -66,7 +66,9 @@ function verificarChute() {
     console.log(parseInt(chute));
     console.log(isNaN(chute));
 
-    validarChute(chute);
+    if (validarChute(chute) == false) { //se a validação falhar, interrompe a aplicação
+        return;
+    } 
     
     if (chute == numeroSecreto) {
         exibirTextoNaTela('h1', 'Acertou!');
@@ -115,7 +117,7 @@ function reiniciarJogo() {
 }
 
 function validarChute(chute) {
-    switch (true) {
+    switch (true) { //compara true com as expressões contidas em case. Ou seja, apenas entra nos cases se a própria condição for verdadeira.
         case chute < 0 || chute > numeroLimite:
             alert(`O chute precisa estar entre 1 e ${numeroLimite}.`);
             return false;
@@ -127,4 +129,9 @@ function validarChute(chute) {
         default:
             return true;
     }
+
+    /*Porque eu usei switch ao invés de uma sequencia de if?
+    
+    Foi uma escolha pessoal, eu acho a estrutura switch case muito elegante e organizada. No meu entendimento, fica mais fácil de rastrear o código, além de melhorar o desenvolvimento a medida que os testes são feitos e novas condições de validação são percebidas como necessárias.
+    */
 }
