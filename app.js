@@ -62,6 +62,11 @@ exibirMensagemInicial();
 
 function verificarChute() {
     let chute = document.querySelector('input').value;
+    console.log(`${chute}`);
+    console.log(parseInt(chute));
+    console.log(isNaN(chute));
+
+    validarChute(chute);
     
     if (chute == numeroSecreto) {
         exibirTextoNaTela('h1', 'Acertou!');
@@ -109,9 +114,17 @@ function reiniciarJogo() {
     document.getElementById('reiniciar').setAttribute('disabled', true)
 }
 
+function validarChute(chute) {
+    switch (true) {
+        case chute < 0 || chute > numeroLimite:
+            alert(`O chute precisa estar entre 1 e ${numeroLimite}.`);
+            return false;
 
-
-
-
-
-
+        case parseInt(chute) == false:
+            alert(`O chute precisa ser um número inteiro entre 1 e ${numeroLimite}.`);
+            return false;
+    
+        default:
+            return true;
+    }
+}
