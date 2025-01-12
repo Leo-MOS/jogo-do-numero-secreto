@@ -36,7 +36,7 @@ Enjoy!
 */
 
 let listaDeNumerosSorteados = [];
-let numeroLimite = 100;
+let numeroLimite = parseInt(prompt('Digite o número máximo.'));
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 
