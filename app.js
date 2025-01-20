@@ -35,7 +35,7 @@ Enjoy!
 /* Testando commits e alterações
 */
 
-alert('Olá! Este é o Jogo do número secreto. O objetivo do jogo é adivinhar o número que foi sorteado. Na próxima tela você será requisitado a preencher um número máximo para o sorteio. Quanto maior o número, mais difícil o jogo.');
+alert('Olá! Este é o Jogo do número secreto. O objetivo do jogo é adivinhar o número que foi sorteado. Na próxima tela você será requisitado a preencher um número máximo para o sorteio. Quanto maior o número, mais difícil o jogo.\n\nObs.: este jogo foi o primeiro projeto desenvolvido por mimcom o objetivo de estudar Lógica de Programação. Se você chegou até aqui através de um portfólio digital, convido-o a acessar o código. Qualquer feedback será muito bem-vindo, inclusive de possíveis desafios. Contato: souza.leandro78@gmail.com');
 
 let listaDeNumerosSorteados = [];
 let numeroLimite;
