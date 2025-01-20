@@ -38,7 +38,12 @@ Enjoy!
 alert('Olá! Este é o Jogo do número secreto. O objetivo do jogo é adivinhar o número que foi sorteado. Na próxima tela você será requisitado a preencher um número máximo para o sorteio. Quanto maior o número, mais difícil o jogo.');
 
 let listaDeNumerosSorteados = [];
-let numeroLimite = parseInt(prompt('Digite o número máximo.'));
+let numeroLimite;
+
+while (isNaN(numeroLimite)) {
+    numeroLimite = parseInt(prompt('Digite o número máximo.'));
+}
+
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 
